@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/Jacqueline8996/burgers/issues"
   },
-  "homepage": "https://github.com/Jacqueline8996/burgers#readme"
+  "homepage": "https://github.com/Jacqueline8996/burgers#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1"
+  }
 }
