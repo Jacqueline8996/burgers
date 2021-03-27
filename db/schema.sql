@@ -6,7 +6,6 @@ USE burger_db;
 CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,
-	toping varchar(255) NOT NULL,
-	
+	input varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );

@@ -1,25 +1,38 @@
-<div class="BurgerPast">
-  <div class="container">
-    <div class="row">
-      <div class="col-5">
-        current 
-      </div>
-      <div class="col-2">
-        Add buttons to devor 
-      </div>
-      <div class="col-5">
-        old
-      </div>
-    </div>
+<h1>Burgers!</h1>
+
+<h2>Burgers that are not devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgerss that are devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burger_name">Burgers Name:</label>
+    <input type="text" id="ca" name="name">
   </div>
-</div>
-<div class="newBurger">
-  <div class="container">
-    <div class="row">
-      <div class="col-6 justify-content-center">
-        <textarea name="newBurgerIteam" cols="30" rows="10" placeholder="Enter your Burger"></textarea>
-        <button type="button" class="btn btn-primary submit">submit</button>
-      </div>
-    </div>
+
+  <div class="form-group">
+    <label for="devoured">devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> devoured!<br>
+    <input type="radio" name="devoured" value="0"> Uneaten
   </div>
-</div>
+
+  <button type="submit">Add Burger</button>
+</form>
