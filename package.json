@@ -20,7 +20,13 @@
   "homepage": "https://github.com/Jacqueline8996/burgers#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.1",
-    "mysql": "^2.18.1"
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.7.7",
+    "install": "^0.13.0",
+    "mysql": "^2.16.0",
+    "npm": "^7.7.5"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
   }
 }
