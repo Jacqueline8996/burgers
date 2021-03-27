@@ -1,70 +1,29 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
-$(function() {
-  $(".change-status").on("click", function(event) {
-  
-    var id = $(this).data("id");
-    let choice = $('[name="devoured"]:checked').val();
+// Import the ORM to create functions that will interact with the database.
+const orm = require("../config/orm.js");
 
-    if (choice === 1) {
-      var newDevoured = 0
-      
-    }else{
-      var newDevoured = 1
-    } 
-    
-    var newBebbanburger = {
-      devoured: newDevoured
-    };
+const burger = {
+  selectAll: function(cb) {
+    orm.selectAll("burgers", function(res) {
+      cb(res);
+    });
+  },
+  // The variables cols and vals are arrays.
+  createOne: function(cols, vals, cb) {
+    orm.createOne("burgers", cols, vals, function(res) {
+      cb(res);
+    });
+  },
+  updateOne: function(objColVals, condition, cb) {
+    orm.updateOne("burgers", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+  deleteOne: function(condition, cb) {
+    orm.deleteOne("burgers", condition, function(res) {
+      cb(res);
+    });
+  }
+};
 
-    // Send the PUT request.
-    $.ajax("/api/burgers/" + id, {
-      type: "PUT",
-      data: newBurger
-    }).then(
-      function() {
-        console.log("changed burger to", newDevoured);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
-
-  $(".create-form").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
-
-    var newBurger = {
-      burger_name: $("#newBurger").val().trim(),
-      devoured: $('[name="devoured"]:checked').val()
-    };
-    console.log("my new burger is", newBurger)
-    console.log("is the burger eaten ", newBurger.devoured)
-
-    // Send the POST request.
-    $.ajax("/api/burgers", {
-      type: "POST",
-      data: newBurger
-    }).then(
-      function() {
-        console.log("created new burger");
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
-
-  $(".delete-yum").on("click", function(event) {
-    var id = $(this).data("id");
-
-    // Send the DELETE request.
-    $.ajax("/api/burgers/" + id, {
-      type: "DELETE"
-    }).then(
-      function() {
-        console.log("deleted burger", id);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
-});
+// Export the database functions for the controller (catsController.js).
+module.exports = burger;
