@@ -12,7 +12,7 @@ $(function() {
       var newDevoured = 1
     } 
     
-    var newBebbanburger = {
+    var newBurger = {
       devoured: newDevoured
     };
 
