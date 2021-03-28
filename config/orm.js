@@ -62,7 +62,7 @@ const orm = {
       cb(result);
     });
   },
-  // An exfample of objColVals would be {name: panther, sleepy: true}
+  // An exfample of objColVals would be {name: burger, devoured or not}
   updateOne: function(table, objColVals, condition, cb) {
     let queryString = "UPDATE " + table;
 
