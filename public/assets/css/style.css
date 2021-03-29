@@ -10,9 +10,10 @@ body{
 }
 h1{
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
-  padding-left:350px
+  padding-left:350px;
+  text-shadow: 2px 2px 3px rgb(94, 240, 155);
 }
 
 .centerInfo{
@@ -33,10 +34,6 @@ h1{
 
 }
 
-.title{
-  font-size: larger;
-
-}
 .label {
   font-weight: bold;
 }
