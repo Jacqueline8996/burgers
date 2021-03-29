@@ -21,9 +21,9 @@
  * Entering Burger
 ![alt text](/public/images/burgerEntered.png)
  * Burger added to the not yet Eaten!
-![alt text](/public/images/burgerAdded.pngg)
+![alt text](/public/images/burgerAdded.png)
  * Burger Status Changed to Eaten
-![alt text](/public/images/burgerEaten.pngg)
+![alt text](/public/images/burgerEaten.png)
  * Burger Delteted
 ![alt text](/public/images/BurgerDeleted.png)
 
