@@ -1,20 +1,36 @@
 body{
   background-color: black;
   font-family: 'Jura', sans-serif; ;
+  background-image:url('../../images/burgerBackground.jpg');
+  max-width: 99%;
+  max-height: 99%;
+  z-index: 2;
+  
+
 }
 h1{
   color: white;
   font-size: 50px;
   text-align: center;
-}
-.backgroundInfo{
-  background-image:url('/../public/images/burgerBackground.png');
-  background-repeat: no-repeat;
+  padding-left:350px
 }
 
+.centerInfo{
+  padding-left:350px
+
+}
+
+#content{
+  background: linear-gradient(rgb(39, 194, 163), rgb(232, 28, 184));
+  z-index: 2;
+}
 #burgerStats{
-  background-color: rgb(85, 211, 211);
+  /* background-color: rgb(85, 211, 211); */
+  background: linear-gradient(rgb(39, 194, 163), rgb(232, 28, 184));
+  border:thick double rgb(249, 249, 249);
+  border-bottom: 0px;
   
+
 }
 
 .title{
@@ -31,7 +47,9 @@ h1{
   background: aqua;
 }
 .newBurger{
-  background-color: fuchsia;
+  background-color: rgb(232, 28, 184);
+  border:thick double rgb(249, 249, 249);
+  border-top: 0px;
   text-align: center;
   color: white;
   width: 80%;
