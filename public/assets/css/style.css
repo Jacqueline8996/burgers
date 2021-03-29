@@ -29,6 +29,7 @@ h1{
   
   background: linear-gradient(rgb(39, 194, 163), rgb(232, 28, 184));
   border:thick double rgb(249, 249, 249);
+  
 }
 
 .label {
@@ -36,7 +37,6 @@ h1{
 }
 #notEat{
   border-right:thick double rgb(249, 249, 249);
-
 }
 
 .create-update-form {
